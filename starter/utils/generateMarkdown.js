@@ -18,20 +18,27 @@ function generateMarkdown(data) {
 
  
  ## Usage
+ To use the app:  
  ${data.usage}
  
 
  ## Contributing
+ If you wish to contribute:  
  ${data.contributing}
 
 
  ## Testing
+ To test the application: 
  ${data.tests}
 
 
  ## Questions
- ${data.github}
- ${data.email}
+ Feel free to contact me if you have any questions! 
+ Reach me via email: ${data.email}  
+
+My GitHub profile:
+ [DumisileM Profile](https://github.com/${data.github})
+
 
 
  ## License

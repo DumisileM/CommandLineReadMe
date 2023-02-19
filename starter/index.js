@@ -3,7 +3,6 @@ const path = require("path");
 const inquirer = require("inquirer");
 const util = require("util")
 const writeFileAsync = util.promisify(fs.writeFile);
-// inquirer.registerPrompt('list-input', require('inquirer-list-input'));
 const generateMarkdown = require("./utils/generateMarkdown");
 let licenses = ["MIT","Apache 2.0 License","Eclipse Public License 1.0"]
 // array of questions for user
@@ -36,7 +35,10 @@ const questions = () => inquirer
     {
         type:"input",
         name:"usage",
-        message:"Enter usage instructions: ",
+        message:"Enter usage instructions (separated by commas): ",
+        filter: function(val) {
+            return val.split(',')
+        }
     },
     {
         type:"list",
@@ -57,17 +59,24 @@ const questions = () => inquirer
     {
         type:"input",
         name:"contributing",
-        message:"Enter contributions guidelines: ",
+        message:"Enter contributions guidelines (separated by commas if applicable): ",
+        filter: function(val) {
+            return val.split(',')
+        }
     },
     {
         type:"input",
         name:"tests",
-        message:"Enter instructions on how to test the application: ",
+        message:"Enter instructions on how to test the application(separated by commas): ",
+        filter: function(val) {
+            return val.split(',')
+        }
     },
     {
         type:"input",
         name:"github",
         message:"Enter your github username: ",
+        
     },
     {
         type:"input",
