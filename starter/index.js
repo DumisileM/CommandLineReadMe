@@ -39,7 +39,7 @@ const questions = () => inquirer
         message:"Enter usage instructions: ",
     },
     {
-        type:"lists",
+        type:"listtest",
         name:"license",
         message:"Pick the license name from this list: ",
         choices: licenses
