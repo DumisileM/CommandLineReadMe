@@ -1,8 +1,11 @@
 const fs = require("fs");
-const path = require('path');
+const path = require("path");
 const inquirer = require("inquirer");
+const util = require("util")
+const writeFileAsync = util.promisify(fs.writeFile);
+// inquirer.registerPrompt('list-input', require('inquirer-list-input'));
 const generateMarkdown = require("./utils/generateMarkdown");
-let licenses = ['MIT','Apache 2.0 License','Eclipse Public License 1.0']
+let licenses = ["MIT","Apache 2.0 License","Eclipse Public License 1.0"]
 // array of questions for user
 
 const questions = () => inquirer
@@ -36,7 +39,7 @@ const questions = () => inquirer
         message:"Enter usage instructions: ",
     },
     {
-        type:"list-input",
+        type:"lists",
         name:"license",
         message:"Pick the license name from this list: ",
         choices: licenses
@@ -70,11 +73,12 @@ const questions = () => inquirer
 
 // function to write README file
 function writeToFile(fileName, data) {
+    writeFileAsync(fileName,data).then(() => console.log("written successfully... :)")).catch((error)=>console.error(error))
 }
 
 // function to initialize program
 function init() {
-    questions()
+    questions().then((answers)=> writeToFile("README.md",generateMarkdown(answers)))
 }
 
 // function call to initialize program
