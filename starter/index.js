@@ -39,10 +39,20 @@ const questions = () => inquirer
         message:"Enter usage instructions: ",
     },
     {
-        type:"listtest",
+        type:"list",
         name:"license",
         message:"Pick the license name from this list: ",
-        choices: licenses
+        choices: licenses,
+        filter: function(val){
+            if(val== "MIT"){
+                
+                return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+            } else if( val == "Apache 2.0 License"){
+                return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+            }else if (val == "Eclipse Public License 1.0"){
+                return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+            }
+        }
     },
     {
         type:"input",
@@ -78,7 +88,15 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    questions().then((answers)=> writeToFile("README.md",generateMarkdown(answers)))
+    questions().then((answers)=> {
+        if(answers.licenses== 'MIT'){
+            
+            answers["licenseBadge"] = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+        }
+    
+    writeToFile("README.md",generateMarkdown(answers))
+    
+})
 }
 
 // function call to initialize program
