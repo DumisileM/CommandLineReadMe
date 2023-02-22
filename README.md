@@ -24,7 +24,12 @@ in your terminal.
 For reference, here is video that demonstrates how the program runs.
 
 
-[Video Demo](./starter/assets/video_demo.mp4)  
+
+https://user-images.githubusercontent.com/65311911/220503294-dfc416cf-324e-4722-8f0c-fa081e779f76.mp4
+
+
+
+### For slower demo
 [Video External link for slower demo](https://drive.google.com/file/d/1J8mbMeMiK0YBz5_oqfCwrdXybwOml4BM/view?usp=sharing)
 
 
