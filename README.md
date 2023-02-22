@@ -1,4 +1,4 @@
-# README Generattor
+# README Generator
 
 
 ## Description 
@@ -25,7 +25,7 @@ For reference, here is video that demonstrates how the program runs.
 
 
 [Video Demo](./starter/assets/video_demo.mp4)  
-[Video External link](https://drive.google.com/file/d/1J8mbMeMiK0YBz5_oqfCwrdXybwOml4BM/view?usp=sharing)
+[Video External link for slower demo](https://drive.google.com/file/d/1J8mbMeMiK0YBz5_oqfCwrdXybwOml4BM/view?usp=sharing)
 
 
 ## Credits
