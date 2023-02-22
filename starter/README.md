@@ -12,32 +12,38 @@
  
 
  ## Installation
- one
- - <br>two
- - <br>three
+ one<br> 
+two<br> 
+three
 
  
  ## Usage
  To use the app:  
- 
+ one<br> 
+two<br> 
+three
  
 
  ## Contributing
  If you wish to contribute:  
- undefined
+ one<br> 
+two<br> 
+three
 
 
  ## Testing
  To test the application: <br>
- undefined
+ one<br> 
+two<br> 
+three
 
 
  ## Questions
  Feel free to contact me if you have any questions! 
- Reach me via email:   
+ Reach me via email: one,two,three  
 
 My GitHub profile:
- [DumisileM Profile](https://github.com/)
+ [DumisileM Profile](https://github.com/one,two,three)
 
 
 
