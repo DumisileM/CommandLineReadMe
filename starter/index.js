@@ -29,7 +29,8 @@ const questions = () => inquirer
         name:"installation",
         message:"Enter installation instructions (separated by commas): ",
         filter: function(val) {
-            return val.split(',')
+        
+            return val.split(',').join("\n <br>")
         }
     },
     {
@@ -37,7 +38,7 @@ const questions = () => inquirer
         name:"usage",
         message:"Enter usage instructions (separated by commas): ",
         filter: function(val) {
-            return val.split(',')
+            return val.split(',').join("\n <br>")
         }
     },
     {
@@ -61,7 +62,7 @@ const questions = () => inquirer
         name:"contributing",
         message:"Enter contributions guidelines (separated by commas if applicable): ",
         filter: function(val) {
-            return val.split(',')
+            return val.split(',').join("\n <br>")
         }
     },
     {
@@ -69,7 +70,7 @@ const questions = () => inquirer
         name:"tests",
         message:"Enter instructions on how to test the application(separated by commas): ",
         filter: function(val) {
-            return val.split(',')
+            return val.split(',').join("\n <br>")
         }
     },
     {

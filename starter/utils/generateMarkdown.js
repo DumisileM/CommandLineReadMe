@@ -24,12 +24,12 @@ function generateMarkdown(data) {
 
  ## Contributing
  If you wish to contribute:  
- ${data.contributing}
+ ${console.log(data.contributing)}
 
 
  ## Testing
- To test the application: 
- ${data.tests}
+ To test the application: <br>
+ ${console.log(data.tests)}
 
 
  ## Questions
